@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name"><center>Basuritas</center></string>
+
+    <string name="title_section0">Inicio</string>
+    <string name="title_section1">Reducir</string>
+    <string name="title_section2">Reutilizar</string>
+    <string name="title_section3">Reciclar</string>
+
+    <string name="title_section5">Denuncias</string>
+
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+
+    <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="denuncias">DENUNCIAS</string>
+    <string name="title_activity_denuncia">DenunciaActivity</string>
+
+    <string name="denuncia">Denuncia</string>
+</resources>
