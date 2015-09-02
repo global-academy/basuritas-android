@@ -4,13 +4,15 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.basuritas.www.basuritas.DenunciaActivity">
+    tools:context="com.basuritas.www.basuritas.DenunciaActivity"
+    android:background="@drawable/fhondo">
 
     <TextView android:text="DENUNCIAS" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2"
+        android:id="@+id/Denuncias"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignRight="@+id/Nombre"
+        android:layout_alignEnd="@+id/Nombre" />
 
     <Button
         android:layout_width="wrap_content"
@@ -26,45 +28,46 @@
         android:layout_height="wrap_content"
         android:text="Cancelar"
         android:id="@+id/button2"
-        android:layout_marginBottom="45dp"
+        android:layout_marginBottom="41dp"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2" />
+        android:layout_toRightOf="@+id/editText"
+        android:layout_toEndOf="@+id/editText" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText"
-        android:text="Comentario"
-        android:layout_above="@+id/button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="72dp" />
+        android:layout_marginBottom="37dp"
+        android:hint="Comentar"
+        android:layout_above="@+id/button2"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText2"
+        android:hint="Apellido"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignStart="@+id/editText"
+        android:textColor="#ff070707" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Nombre"
+        android:hint="Nombre"
+        android:layout_above="@+id/editText2"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignStart="@+id/editText2" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:layout_above="@+id/editText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="64dp"
-        android:onClick="tomarFoto" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nombre"
-        android:id="@+id/textView"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Apellido"
-        android:id="@+id/textView3"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp" />
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/camara"
+        android:layout_marginTop="30dp"
+        android:background="#fe000000"
+        android:layout_below="@+id/Denuncias"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

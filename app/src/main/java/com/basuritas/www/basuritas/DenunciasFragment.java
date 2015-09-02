@@ -1,6 +1,7 @@
 package com.basuritas.www.basuritas;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -10,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -77,12 +79,19 @@ public class DenunciasFragment extends Fragment {
         View fragmentView = inflater.inflate(R.layout.fragment_denuncias, container, false);
         denuncias = new ArrayList<Denuncia>();
 
+
         listView = (ListView) fragmentView.findViewById((R.id.listView));
-        List<Denuncia> denuncias = null;
         DenunciasAdapter adapter = new DenunciasAdapter(container.getContext(),R.layout.denuncia,denuncias);
         listView.setAdapter(adapter);
+        Button nuevaDenuncia = (Button)fragmentView.findViewById(R.id.Denunciar);
+        nuevaDenuncia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), DenunciaActivity.class);
+                getActivity().startActivity(intent);
 
-
+            }
+        });
 
         return fragmentView;
     }
@@ -92,6 +101,7 @@ public class DenunciasFragment extends Fragment {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
         }
+
     }
 
     @Override
